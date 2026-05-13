@@ -943,3 +943,29 @@ details p{
     min-height:320px;
   }
 }
+.brand-logo{
+  gap:12px;
+}
+
+.brand-logo__mark{
+  width:48px;
+  height:48px;
+  object-fit:contain;
+  display:block;
+}
+
+.brand-logo .brand-text{
+  font-weight:900;
+  letter-spacing:.02em;
+}
+
+@media(max-width:620px){
+  .brand-logo__mark{
+    width:42px;
+    height:42px;
+  }
+
+  .brand-logo .brand-text{
+    font-size:.92rem;
+  }
+}
