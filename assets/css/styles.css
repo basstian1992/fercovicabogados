@@ -819,3 +819,62 @@ details p{
     display:flex;
   }
 }
+.faq-premium{
+  display:grid;
+  gap:14px;
+}
+
+.faq-premium details{
+  position:relative;
+  overflow:hidden;
+  transition:.2s ease;
+}
+
+.faq-premium details::before{
+  content:"";
+  position:absolute;
+  inset:0 auto 0 0;
+  width:4px;
+  background:linear-gradient(180deg, var(--gold), var(--gold2));
+  opacity:.75;
+}
+
+.faq-premium details:hover{
+  transform:translateY(-2px);
+  border-color:rgba(201,164,92,.45);
+  background:rgba(255,255,255,.075);
+}
+
+.faq-premium summary{
+  list-style:none;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+}
+
+.faq-premium summary::-webkit-details-marker{
+  display:none;
+}
+
+.faq-premium summary::after{
+  content:"+";
+  width:32px;
+  height:32px;
+  min-width:32px;
+  display:grid;
+  place-items:center;
+  border-radius:999px;
+  background:rgba(201,164,92,.13);
+  border:1px solid rgba(201,164,92,.28);
+  color:var(--gold2);
+  font-size:1.3rem;
+  line-height:1;
+  transition:.2s ease;
+}
+
+.faq-premium details[open] summary::after{
+  content:"–";
+  background:linear-gradient(135deg, var(--gold), var(--gold2));
+  color:#09111d;
+}
