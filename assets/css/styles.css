@@ -1142,3 +1142,15 @@ details p{
     display:flex;
   }
 }
+.contact-card strong{
+  display:block;
+  color:var(--navy);
+  font-weight:950;
+  font-size:1.05rem;
+}
+
+@media(max-width:900px){
+  .contact-cards{
+    grid-template-columns:1fr;
+  }
+}
